@@ -1,0 +1,7 @@
+1 -> chmod +x test.py  ### compiling test.py file
+2 -> nohup test.py > output.log & nohup python test.py > output.log ### getting output
+3 -> ps ax | grep test.py ### to check process informations
+
+
+
+4 -> pkill -f test.py  ### to kill the test.py file

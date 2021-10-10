@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <H2>You can add new data here</H2>
+    </div>
+
+    <div>
+        <form name="addForm" id="addForm" method="POST" action="{{ url_for('addnew') }}" novalidate>
+            <input type="text" class="form-control" placeholder="First name" name="first-name" id="first-name" required data-validation-required-message="Please enter data">
+            <input type="text" class="form-control" placeholder="Last name" name="last-name" id="last-name" required data-validation-required-message="Please enter a data">
+            <input type="text" class="form-control" placeholder="Age" name="age" id="age" required data-validation-required-message="Please enter data">
+            <input type="text" class="form-control" placeholder="Image file path" name="file-path" id="file-path">
+            <button type="submit" class="btn btn-secondary" id="sendMessageButton">Add</button>
+    
+        </form>
+
+    </div>
+
+    
+    
+</body>
+</html>

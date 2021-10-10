@@ -1,0 +1,19 @@
+### Task ### 
+
++----+-----------+-----------
+| id | firstname | lastname |
++----+-----------+-----------
+| 1  | Ivan      | Sidorov  |
+| 2  | Alexandr  | Ivanov   |
+| 3  | Petr      | Petrov   |
+| 4  | Stepan    | Ivanov   |
++----+-----------+----------+
+
+
+### find all duplicate lastnames ###
+
+
+SELECT lastname
+FROM user
+GROUP BY lastname
+HAVING COUNT(lastname) > 1

@@ -1,0 +1,27 @@
+
++---------+--------+
+| user_id | salary |
++----+--------+----+
+| 1       | 1000   |
+| 2       | 1100   |
+| 3       | 900    |
+| 4       | 1200   |
++---------+--------+
+
+
++---------+--------+
+| id | username    |
++----+--------+----+
+| 1  | Alex       |
+| 2  | Maria      |
+| 3  | Bob        |
+| 4  | Sean       |
++---------+-------+
+
+
+### Prints second highest salary ###
+
+SELECT USERNAME, SALARY FROM user
+LEFT JOIN salary
+ON user.id = salary.user_id
+WHERE SALARY IN (SELECT SALARY FROM salary) ORDER BY SALARY DESC LIMIT 1 OFFSET 1

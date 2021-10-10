@@ -1,0 +1,20 @@
+
+
+### INITIAL FORM ###
+
+SELECT id
+FROM users
+WHERE id NOT IN (
+	SELECT user_id
+	FROM departments
+	WHERE department_id = 1
+);
+
+
+
+### REWRITTEN FORM WITHOUT SUBQUERY ###
+
+SELECT users.*
+  FROM users LEFT JOIN departments ON users.id != departments.user_id
+  WHERE departments.department_id=1;
+

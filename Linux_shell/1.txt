@@ -1,0 +1,7 @@
+### using netstat
+
+sudo netstat -plnt   ### to know all listening ports
+
+sudo netstat -plnt | grep ':80'     ### to know processes listening on only port 80
+
+sudo netstat -plnt | agrep ':80;:443'   ### to know processes listening ports

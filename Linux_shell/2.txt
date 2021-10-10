@@ -1,0 +1,6 @@
+ps aux | grep #PID#
+
+cat /proc/#PID#/environ | tr '\0' '\n'
+
+
+insert PID of process in #PID# 
